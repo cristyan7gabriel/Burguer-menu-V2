@@ -1,0 +1,150 @@
+import { Product, ExtraOption, StoreConfig, CategoryType } from '../types';
+
+export const STORE_CONFIG_DEFAULT: StoreConfig = {
+  nome: 'Burger House Artesanal',
+  whatsapp: '5511999998888', // 55 + DDD + Telefone
+  taxaEntrega: 7.00,
+  horarioFuncionamento: '18:00 às 23:30',
+  tempoEstimado: '35 - 50 min',
+  aberto: true,
+  endereco: 'Rua dos Burgers, 450 - Centro Gastronômico',
+};
+
+export const CATEGORIES: CategoryType[] = [
+  'Todos',
+  'Burgers Artesanais',
+  'Combos',
+  'Porções & Fritas',
+  'Bebidas',
+  'Sobremesas',
+];
+
+export const EXTRAS_DISPONIVEIS: ExtraOption[] = [
+  { id: 'ext-bacon', nome: 'Bacon artesanal crocante em tiras', preco: 4.00 },
+  { id: 'ext-cheddar', nome: 'Queijo cheddar duplo cremoso', preco: 5.00 },
+  { id: 'ext-burger', nome: 'Hambúrguer extra blend bovino 160g', preco: 8.00 },
+  { id: 'ext-cebola', nome: 'Cebola caramelizada na cerveja preta', preco: 3.50 },
+  { id: 'ext-molho', nome: 'Molho especial da Burger House (50ml)', preco: 3.00 },
+  { id: 'ext-picles', nome: 'Picles artesanal agridoce da casa', preco: 2.50 },
+  { id: 'ext-ovo', nome: 'Ovo caipira gema mole na chapa', preco: 3.00 },
+];
+
+export const PONTOS_CARNE = [
+  'Ao ponto (Centro rosado e suculento)',
+  'Bem passado (Grelhado firme, sem rosado)',
+  'Ao ponto para bem (Suavemente rosado)',
+];
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 'prod-1',
+    nome: 'Smash Bacon Burger',
+    categoria: 'Burgers Artesanais',
+    preco: 28.00,
+    descricao: 'Dois smash burgers de 90g com crostinha crocante, queijo cheddar inglês derretido, fatias fartas de bacon defumado e nossa maionese da casa no pão brioche dourado.',
+    url_imagem: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: true,
+    tag: 'Mais Pedido',
+    pontos_carne: false, // smash é padronizado
+  },
+  {
+    id: 'prod-2',
+    nome: 'Duplo Cheddar Melt Artesanal',
+    categoria: 'Burgers Artesanais',
+    preco: 34.00,
+    descricao: 'Blend artesanal alto de 180g de costela angus, cebola grelhada na chapa com shoyu especial, piscina densa de cheddar cremoso no pão australiano tostado na manteiga.',
+    url_imagem: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: true,
+    tag: 'Favorito do Chef',
+    pontos_carne: true,
+  },
+  {
+    id: 'prod-3',
+    nome: 'Crispy Chicken Supreme',
+    categoria: 'Burgers Artesanais',
+    preco: 29.00,
+    descricao: 'Filé de sobrecoxa ultra crocante empanado no buttermilk com tempero secreto, queijo prato maçaricado, salada coleslaw fresca e molho honey mustard no brioche.',
+    url_imagem: 'https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: true,
+    pontos_carne: false,
+  },
+  {
+    id: 'prod-4',
+    nome: 'Smash Salad Gourmet',
+    categoria: 'Burgers Artesanais',
+    preco: 26.00,
+    descricao: 'Blend smash duplo 180g, queijo estepe derretido, fatias de tomate italiano caipira grelhado, folhas frescas de rúcula, cebola roxa marinada e molho verde de ervas.',
+    url_imagem: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: true,
+    pontos_carne: false,
+  },
+  {
+    id: 'prod-5',
+    nome: 'Combo Smash Bacon Individual',
+    categoria: 'Combos',
+    preco: 42.00,
+    descricao: '1x Smash Bacon Burger + 1x Porção de Fritas Rústicas com tempero da casa (150g) + 1x Refrigerante em lata 350ml bem gelado. A escolha perfeita!',
+    url_imagem: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: true,
+    tag: 'Combo Econômico',
+    pontos_carne: false,
+  },
+  {
+    id: 'prod-6',
+    nome: 'Combo Casal Burger & Fritas',
+    categoria: 'Combos',
+    preco: 79.00,
+    descricao: '2x Burgers artesanais à escolha + 1x Batata Rústica Grande com cheddar cremoso e bacon crocante (350g) + 2x Bebidas em lata. Serve duas pessoas fartamente.',
+    url_imagem: 'https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: true,
+    tag: 'Serve 2 Pessoas',
+    pontos_carne: true,
+  },
+  {
+    id: 'prod-7',
+    nome: 'Batata Rústica com Cheddar & Bacon',
+    categoria: 'Porções & Fritas',
+    preco: 22.00,
+    descricao: 'Batatas rústicas artesanais com casca, cortadas à mão, douradas e crocantes, cobertas com calda quente de queijo cheddar e farta farofa de bacon crocante.',
+    url_imagem: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: true,
+    tag: 'Porção Farta',
+  },
+  {
+    id: 'prod-8',
+    nome: 'Onion Rings Crocantes com BBQ',
+    categoria: 'Porções & Fritas',
+    preco: 18.00,
+    descricao: '10 unidades de anéis de cebola selecionados empanados na farinha panko crocante, sequinhos por fora. Acompanha pote de 60ml de barbecue artesanal defumado.',
+    url_imagem: 'https://images.unsplash.com/photo-1639024471287-03521484501a?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: false,
+  },
+  {
+    id: 'prod-9',
+    nome: 'Coca-Cola Lata 350ml (Gelada)',
+    categoria: 'Bebidas',
+    preco: 6.00,
+    descricao: 'Refrigerante Coca-Cola em lata trincando de gelada. Escolha Normal ou Zero Açúcar nas observações do pedido.',
+    url_imagem: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: false,
+  },
+  {
+    id: 'prod-10',
+    nome: 'Suco Natural de Laranja 500ml',
+    categoria: 'Bebidas',
+    preco: 9.00,
+    descricao: 'Suco integral de laranja pêra espremido na hora da fruta fresca. 100% natural, sem adição de açúcar ou água.',
+    url_imagem: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: false,
+  },
+  {
+    id: 'prod-11',
+    nome: 'Brownie Vulcão com Sorvete de Baunilha',
+    categoria: 'Sobremesas',
+    preco: 21.00,
+    descricao: 'Fatia alta de brownie denso de chocolate belga meio amargo com castanhas, servido com bola de sorvete de creme e calda quente de fudge de chocolate.',
+    url_imagem: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80',
+    permite_adicionais: true,
+    tag: 'Artesanal',
+  },
+];

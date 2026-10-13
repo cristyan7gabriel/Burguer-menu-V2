@@ -1,0 +1,6 @@
+{
+  "name": "Burger House Artesanal",
+  "description": "Cardápio digital e sistema de pedidos mobile-first com fechamento instantâneo via WhatsApp para hamburguerias e lanchonetes artesanais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
